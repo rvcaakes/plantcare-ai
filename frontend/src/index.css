@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Animasi background & 3D ===== */
+
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(14vw, 10vh) scale(1.2); }
+}
+
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-12vw, 14vh) scale(1.15); }
+}
+
+@keyframes drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10vw, -12vh) scale(1.25); }
+}
+
+@keyframes scan {
+  0%, 100% { top: 6%; }
+  50% { top: 94%; }
+}
+
+@keyframes float3d {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: translate3d(0, -36px, 80px) rotateX(40deg) rotateY(180deg) rotateZ(18deg);
+  }
+}
+
+.animate-drift-a { animation: drift-a 20s ease-in-out infinite; }
+.animate-drift-b { animation: drift-b 26s ease-in-out infinite; }
+.animate-drift-c { animation: drift-c 32s ease-in-out infinite; }
+.animate-scan { animation: scan 3.2s ease-in-out infinite; }
+.animate-float3d { animation: float3d 10s ease-in-out infinite; }
